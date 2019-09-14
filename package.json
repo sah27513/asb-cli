@@ -24,7 +24,9 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^asb": "<rootDir>/src/index.js"
+      "^asb": "<rootDir>/src/index.js",
+      "^src/(.*)$": "<rootDir>/src/$1",
+      "^test/(.*)$": "<rootDir>/test/$1"
     },
     "collectCoverage": true,
     "collectCoverageFrom": [
@@ -41,8 +43,10 @@
   "dependencies": {
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
+    "azure": "^2.3.1-preview",
     "babel-jest": "^24.9.0",
     "backpack-core": "^0.8.4",
+    "chalk": "^2.4.2",
     "dotenv": "^8.1.0",
     "esm": "^3.2.25",
     "jest": "^24.9.0"
