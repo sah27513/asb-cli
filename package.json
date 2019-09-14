@@ -1,0 +1,27 @@
+{
+  "name": "sb-cli",
+  "version": "1.0.0",
+  "description": "Asure Service Bus CLI client",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test",
+    "build": "backpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sah27513/asb-cli.git"
+  },
+  "keywords": [
+    "Azure",
+    "Service",
+    "Bus",
+    "Service",
+    "Bus"
+  ],
+  "author": "Stephen Halliburton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sah27513/asb-cli/issues"
+  },
+  "homepage": "https://github.com/sah27513/asb-cli#readme"
+}
