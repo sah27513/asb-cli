@@ -1,20 +1,29 @@
 import * as asb from "asb";
 import { MissingConnection } from "src/errors";
 import { config as env } from "dotenv";
-import azure from "azure";
 import chalk from "chalk";
+import azure from "azure";
+
+// Import Local Dependencies
+import * as shared from "src/shared/azure";
 
 // Import Mock Data
 import { serviceBus } from "test/data";
+
+// Mock Modules
+jest.mock("azure");
 
 // Instantiate Variables
 let main;
 
 describe("Azure Service Bus CLI", () => {
   beforeEach(() => {
+    // Spy On the main function
     main = jest.spyOn(asb, "asb");
-    jest.spyOn(azure, "createServiceBusService").mockReturnValue(serviceBus);
-    jest.spyOn(global.console, "log");
+
+    // Mock the return values
+    jest.spyOn(global.console, "log").mockReturnValue("");
+    jest.spyOn(shared, "ServiceBus").mockReturnValue(serviceBus);
   });
 
   afterEach(() => {
@@ -26,11 +35,12 @@ describe("Azure Service Bus CLI", () => {
   /**
    * General
    */
-  test("It Can connect to Azure Service Bus", async next => {
+  test("It Can Call the ServiceBus method to create a Service Bus instance", async next => {
     // Run the test
     main();
 
     // Assertions
+    expect(shared.ServiceBus).toHaveBeenCalledWith(azure);
     expect(console.log).toHaveBeenCalledWith(
       chalk.green("info:"),
       chalk.grey("Successfully Connected to:"),
@@ -48,14 +58,6 @@ describe("Azure Service Bus CLI", () => {
     // Assertions
     expect(main).toThrow(new MissingConnection());
 
-    // Complete the Test
-    next();
-  });
-
-  /**
-   * Topics
-   */
-  test("It can Create a Topic", async next => {
     // Complete the Test
     next();
   });

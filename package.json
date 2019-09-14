@@ -1,6 +1,6 @@
 {
   "name": "asb-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Asure Service Bus CLI client",
   "main": "lib/index.js",
   "bin": {
@@ -30,7 +30,8 @@
     },
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.js"
+      "src/**/*.js",
+      "!src/**/*/index.js"
     ]
   },
   "preferGlobal": true,

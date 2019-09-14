@@ -4,6 +4,9 @@ import { MissingConnection } from "src/errors";
 import azure from "azure";
 import chalk from "chalk";
 
+// Local Dependencies
+import { ServiceBus } from "src/shared";
+
 // Configure Environment
 env();
 
@@ -18,7 +21,8 @@ export function asb(args) {
   }
 
   // Create an instance of Azure Service Bus
-  const serviceBus = azure.createServiceBusService();
+  const serviceBus = ServiceBus(azure);
+
   console.log(
     chalk.green("info:"),
     chalk.grey("Successfully Connected to:"),
