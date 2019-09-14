@@ -2,9 +2,11 @@
 
 > Utility for creating Topics, Queues, and Subscriptions with an instance of Azure Service Bus (ASB)
 
+Lead Maintainer: [Stephen Halliburton](mailto:sah27513@gmail.com)
+
 ---
 
-![NPM](https://img.shields.io/badge/npm-v6.3.0-blue)
+[![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 ## Table of Contents
 
@@ -78,6 +80,13 @@ Reach out to me at the following:
 
 ## License
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+MIT © [stephen halliburton]()
 
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+[npm-image]: https://badge.fury.io/js/npm.svg
+[npm-url]: https://badge.fury.io/js/npm
+[travis-image]: https://travis-ci.com/sah27513/asb-cli.svg?branch=master
+[travis-url]: https://travis-ci.com/sah27513/asb-cli
+[daviddm-image]: https://david-dm.org/sah27513/asb-cli.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/sah27513/asb-cli
+[coveralls-image]: https://coveralls.io/repos/github/sah27513/asb-cli/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/sah27513/asb-cli?branch=master
