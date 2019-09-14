@@ -4,7 +4,7 @@
 
 ---
 
-[![NPM](https://img.shields.io/badge/npm-v6.3.0-blue)
+![NPM](https://img.shields.io/badge/npm-v6.3.0-blue)
 
 ## Table of Contents
 
