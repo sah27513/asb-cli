@@ -5,7 +5,7 @@ import azure from "azure";
 import chalk from "chalk";
 
 // Local Dependencies
-import { ServiceBus } from "src/shared";
+import { createServiceBus } from "src/shared";
 
 // Configure Environment
 env();
@@ -14,14 +14,14 @@ env();
  * Azure Service Bus Utility
  * @param {array} args -- Array of Command Line ARGS
  */
-export function asb(args) {
+export function asb() {
   // Check if the connection is Defined
   if (!process.env.AZURE_SERVICEBUS_CONNECTION_STRING) {
     throw new MissingConnection();
   }
 
   // Create an instance of Azure Service Bus
-  const serviceBus = ServiceBus(azure);
+  const serviceBus = createServiceBus(azure);
 
   console.log(
     chalk.green("info:"),

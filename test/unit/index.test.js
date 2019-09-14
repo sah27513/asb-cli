@@ -23,7 +23,7 @@ describe("Azure Service Bus CLI", () => {
 
     // Mock the return values
     jest.spyOn(global.console, "log").mockReturnValue("");
-    jest.spyOn(shared, "ServiceBus").mockReturnValue(serviceBus);
+    jest.spyOn(shared, "createServiceBus").mockReturnValue(serviceBus);
   });
 
   afterEach(() => {
@@ -40,7 +40,7 @@ describe("Azure Service Bus CLI", () => {
     main();
 
     // Assertions
-    expect(shared.ServiceBus).toHaveBeenCalledWith(azure);
+    expect(shared.createServiceBus).toHaveBeenCalledWith(azure);
     expect(console.log).toHaveBeenCalledWith(
       chalk.green("info:"),
       chalk.grey("Successfully Connected to:"),

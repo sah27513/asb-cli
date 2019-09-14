@@ -8,12 +8,12 @@ import { serviceBus } from "test/data";
 jest.mock("azure");
 
 // Instantiate the Spies
-let ServiceBus;
+let serviceBusInstance;
 
 describe("Azure Methods", () => {
   beforeEach(() => {
     // Spy on the Service Bus Method
-    ServiceBus = jest.spyOn(azureMethods, "ServiceBus");
+    serviceBusInstance = jest.spyOn(azureMethods, "createServiceBus");
 
     // Mock The Service Bus Instance
     azure.createServiceBusService.mockReturnValue(serviceBus);
@@ -25,7 +25,7 @@ describe("Azure Methods", () => {
 
   test("It Creates a Service Bus Instancs", async next => {
     // Run the test
-    const result = ServiceBus(azure);
+    const result = serviceBusInstance(azure);
 
     // Assertions
     expect(result).toBe(serviceBus);

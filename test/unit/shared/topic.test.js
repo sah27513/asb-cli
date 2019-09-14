@@ -1,11 +1,6 @@
-import * as shared from "src/shared";
-
-// Instantiate Spies
-let createTopic;
-
 describe("Topic Utilites", () => {
   beforeEach(() => {
-    // createTopic = jest.spyOn(shared, "createTopic");
+    // CreateTopic = jest.spyOn(shared, "createTopic");
   });
 
   test("It Returns the Topic Name without an error", async next => {

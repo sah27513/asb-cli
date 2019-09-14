@@ -1,8 +1,8 @@
 const path = require("path");
 
-// backpack.config.js
+// Backpack.config.js
 module.exports = {
-  webpack: (config, options, webpack) => {
+  webpack: config => {
     // Perform customizations to config
     config.resolve = {
       alias: {

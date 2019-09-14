@@ -1,1 +1,1 @@
-export const ServiceBus = azure => azure.createServiceBusService();
+export const createServiceBus = azure => azure.createServiceBusService();
