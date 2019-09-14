@@ -1,0 +1,8 @@
+# Ignore Node Modules
+node_modules/
+
+# Ignore the Jest Coverage reports
+coverage/
+
+# Ignore the Environment variables
+.env

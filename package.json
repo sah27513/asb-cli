@@ -1,27 +1,57 @@
 {
-  "name": "sb-cli",
-  "version": "1.0.0",
+  "name": "asb-cli",
+  "version": "0.0.1",
   "description": "Asure Service Bus CLI client",
   "main": "lib/index.js",
-  "scripts": {
-    "test": "npm test",
-    "build": "backpack build"
+  "bin": {
+    "asb": "./bin/asb.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest -u",
+    "build": "backpack build",
+    "start": "backpack"
+  },
+  "keywords": [
+    "Azure Service Bus",
+    "Service Bus"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sah27513/asb-cli.git"
   },
-  "keywords": [
-    "Azure",
-    "Service",
-    "Bus",
-    "Service",
-    "Bus"
-  ],
+  "jest": {
+    "moduleNameMapper": {
+      "^asb": "<rootDir>/src/index.js"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
+  "preferGlobal": true,
   "author": "Stephen Halliburton",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sah27513/asb-cli/issues"
   },
-  "homepage": "https://github.com/sah27513/asb-cli#readme"
+  "homepage": "https://github.com/sah27513/asb-cli#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "babel-jest": "^24.9.0",
+    "backpack-core": "^0.8.4",
+    "dotenv": "^8.1.0",
+    "esm": "^3.2.25",
+    "jest": "^24.9.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0"
+  }
 }
