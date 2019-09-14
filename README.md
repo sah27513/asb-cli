@@ -89,4 +89,4 @@ MIT © [stephen halliburton]()
 [daviddm-image]: https://david-dm.org/sah27513/asb-cli.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/sah27513/asb-cli
 [coveralls-image]: https://coveralls.io/repos/github/sah27513/asb-cli/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/sah27513/asb-cli?branch=master
+[coveralls-url]: https://coveralls.io/github/sah27513/asb-cli?branch=masterg&service=github
